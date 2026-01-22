@@ -1,0 +1,34 @@
+@font-face {
+    font-family: montserrat;
+    src: url("assets/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url("assets/Montserrat-Bold.ttf");
+    font-weight: bold;
+}
+
+body {
+    font-family: montserrat;
+}
+
+h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.timeline-container {
+    width: 80%;
+    margin: auto;
+}
+
+.timeline-year {
+    padding: 2px;
+    color: rgb(52, 81, 188)
+}
+
+.timeline-content {
+    padding: 2px;
+}
