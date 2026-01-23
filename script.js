@@ -1,7 +1,7 @@
 import data from './timeline.json' with {type: 'json'};
 
-let timeline = data["timeline"]; // 
-let timeline_element = document.querySelector(".timeline-container");
+const timeline = data["timeline"]; // 
+const timeline_element = document.querySelector(".timeline-container");
 
 function basic_timeline() {
     // populate timeline HTML with each of the JSON objects
@@ -44,7 +44,7 @@ function svg_timeline() {
     // create a path
     let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute("style", "fill:none;stroke:black;stroke-width:4");
-    path.setAttribute("d", "M 150 5 L75 200 L225 200 Z");
+    path.setAttribute("d", "M -55.091427714147 32.93482667420345 C 144.80113790883007 97.3739627535241, -63.952133266506024 143.62058439792494, 38.26398948256795 214.25147018169218 C 162.46181137734635 22.644965168521622, 274.9332664498524 358.1171925569978, 225.70283492497651 78.7704555568541");
 
     // add path to the svg element, then add the svg to the html
     svg.append(path);
@@ -53,9 +53,9 @@ function svg_timeline() {
     // above is our finished path!    
 
     // calculate distance between markers
-    let svg_length = document.querySelector("path").getTotalLength();
-    let num_segments = 5;
-    let segment_length = svg_length / num_segments;
+    const svg_length = document.querySelector("path").getTotalLength();
+    const num_segments = timeline.length;
+    const segment_length = svg_length / num_segments;
     let current_marker = 0;
 
     for (let i = 0; i <= svg_length; i+= segment_length) {
@@ -79,7 +79,22 @@ function svg_timeline() {
 }
 
 function handle_marker_click(current_marker) {
-    console.log(`Clicked marker: ${timeline[current_marker].year}`);
+    const content = document.querySelector(".content");
+    const header = document.createElement("h2");
+    header.classList.add("timeline-year");
+    header.textContent = timeline[current_marker].year;
+
+    const text = document.createElement("div");
+    text.classList.add("timeline-content");
+    text.textContent = timeline[current_marker].content;
+
+    while (content.childNodes.length >= 1) {
+        content.removeChild(content.firstChild); // remove all child nodes
+    }
+
+    // add year and text
+    content.append(header);
+    content.append(text);
 }
 
 svg_timeline();

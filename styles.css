@@ -19,9 +19,28 @@ h1 {
     text-align: center;
 }
 
-.timeline-container {
+.center {
     width: 80%;
     margin: auto;
+}
+
+.timeline-container {
+    height: 80vh;
+    background-color: rgb(227, 236, 236);
+    padding: 5px;
+}
+
+.content {
+    height: 80vh;
+    background-color: bisque;
+    width: 15%;
+    padding: 5px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .timeline-year {
