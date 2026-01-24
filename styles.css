@@ -1,0 +1,53 @@
+@font-face {
+    font-family: montserrat;
+    src: url("assets/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url("assets/Montserrat-Bold.ttf");
+    font-weight: bold;
+}
+
+body {
+    font-family: montserrat;
+}
+
+h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.center {
+    width: 80%;
+    margin: auto;
+}
+
+.timeline-container {
+    height: 80vh;
+    background-color: rgb(227, 236, 236);
+    padding: 5px;
+}
+
+.content {
+    height: 80vh;
+    background-color: bisque;
+    width: 15%;
+    padding: 5px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.timeline-year {
+    padding: 2px;
+    color: rgb(52, 81, 188)
+}
+
+.timeline-content {
+    padding: 2px;
+}
