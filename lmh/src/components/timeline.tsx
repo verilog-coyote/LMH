@@ -78,10 +78,9 @@ export default function Timeline() {
             x={markers[openIndex].x + 15}
             y={markers[openIndex].y - 60}
             width="320"
-            height="200"
-            className="pointer-events-none"
+            height="240"
           >
-            <div className="w-80 rounded-md border bg-popover p-4 text-popover-foreground shadow-md">
+            <div className="w-80 max-h-52 rounded-md border bg-popover p-4 text-popover-foreground shadow-md overflow-y-auto overflow-x-hidden">
               <h2 className="text-lg font-bold text-[#3451bc] mb-2">{timeline[openIndex].year}</h2>
               <p className="text-sm">{timeline[openIndex].content}</p>
             </div>
