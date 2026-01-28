@@ -63,31 +63,30 @@ export default function Timeline() {
           strokeWidth="4"
         />
         {markers.map((marker) => (
-          <g key={marker.index}>
-            <circle
-              cx={marker.x}
-              cy={marker.y}
-              r={openIndex === marker.index ? "7" : "5"}
-              fill="black"
-              className="cursor-pointer transition-all"
-              onClick={() => setOpenIndex(openIndex === marker.index ? null : marker.index)}
-            />
-            {openIndex === marker.index && (
-              <foreignObject
-                x={marker.x + 15}
-                y={marker.y - 60}
-                width="320"
-                height="200"
-                className="pointer-events-none"
-              >
-                <div className="w-80 rounded-md border bg-popover p-4 text-popover-foreground shadow-md">
-                  <h2 className="text-lg font-bold text-[#3451bc] mb-2">{timeline[marker.index].year}</h2>
-                  <p className="text-sm">{timeline[marker.index].content}</p>
-                </div>
-              </foreignObject>
-            )}
-          </g>
+          <circle
+            key={marker.index}
+            cx={marker.x}
+            cy={marker.y}
+            r={openIndex === marker.index ? "7" : "5"}
+            fill="black"
+            className="cursor-pointer transition-all"
+            onClick={() => setOpenIndex(openIndex === marker.index ? null : marker.index)}
+          />
         ))}
+        {openIndex !== null && markers[openIndex] && (
+          <foreignObject
+            x={markers[openIndex].x + 15}
+            y={markers[openIndex].y - 60}
+            width="320"
+            height="200"
+            className="pointer-events-none"
+          >
+            <div className="w-80 rounded-md border bg-popover p-4 text-popover-foreground shadow-md">
+              <h2 className="text-lg font-bold text-[#3451bc] mb-2">{timeline[openIndex].year}</h2>
+              <p className="text-sm">{timeline[openIndex].content}</p>
+            </div>
+          </foreignObject>
+        )}
       </svg>
     </div>
   )
