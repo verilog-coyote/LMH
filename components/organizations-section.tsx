@@ -14,6 +14,7 @@ const ORGANIZATIONS = [
   { name: "Hui Nalu Canoe Club", role: "Cultural Partner", description: "Cultural partner connecting the community to the ocean and traditional Hawaiian canoe practices along the Kaiwi Coast.", founded: "1908" },
   { name: "Friends of Hanauma Bay", role: "Marine Conservation", description: "Non-profit dedicated to the conservation, protection, and restoration of Hanauma Bay, Hawai\u2018i\u2019s first Marine Life Conservation District. Conducts coral restoration, clean-ups, scientific studies, and community education since 1991.", founded: "1991" },
   { name: "Sierra Club Oahu Group", role: "Environmental Advocacy", description: "Volunteer-led advocacy group with over 8,000 members. Led the restoration of Wawamalu Beach on the Kaiwi Scenic Shoreline, removing invasive species, planting native trees, and advocating for protections against illegal off-roading.", founded: "1968" },
+  { name: "808 Cleanups", role: "Environmental Restoration", description: "501(c)(3) nonprofit empowering communities to restore Hawai\u02BBi\u2019s native ecosystems mauka to makai. Over 8,000 volunteers have removed more than 1 million pounds of trash through beach, trail, reef, and urban cleanups, invasive species removal, and native plant restoration across all islands.", founded: "2013" },
 ]
 
 export function OrganizationsSection() {
