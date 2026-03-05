@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <!-- Hawaiian Kakau central motif - symmetrical design for behind headlines -->
+  <!-- Uses teal (#32AD99) for visibility as background-image -->
+
+  <!-- Central vertical axis ornament -->
+  <g opacity="0.8" transform="translate(250,150)">
+    <path d="M0 -60 L30 0 L0 60 L-30 0Z" fill="none" stroke="#32AD99" stroke-width="2.5"/>
+    <path d="M0 -45 L22 0 L0 45 L-22 0Z" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M0 -30 L14 0 L0 30 L-14 0Z" fill="#32AD99" opacity="0.15"/>
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#32AD99" stroke-width="1.2" opacity="0.6"/>
+    <line x1="0" y1="-45" x2="0" y2="45" stroke="#32AD99" stroke-width="1.2" opacity="0.6"/>
+  </g>
+
+  <!-- Left arm: niho mano extending left -->
+  <g opacity="0.75">
+    <path d="M220 140 L205 155 L190 140 L175 155 L160 140 L145 155 L130 140 L115 155 L100 140 L85 155 L70 140 L55 155 L40 140" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M190 140 L175 155 L160 140Z M130 140 L115 155 L100 140Z M70 140 L55 155 L40 140Z" fill="#32AD99" opacity="0.25"/>
+
+    <path d="M220 160 L205 145 L190 160 L175 145 L160 160 L145 145 L130 160 L115 145 L100 160 L85 145 L70 160 L55 145 L40 160" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M220 160 L205 145 L190 160Z M160 160 L145 145 L130 160Z M100 160 L85 145 L70 160Z" fill="#32AD99" opacity="0.25"/>
+  </g>
+
+  <!-- Right arm: niho mano extending right -->
+  <g opacity="0.75">
+    <path d="M280 140 L295 155 L310 140 L325 155 L340 140 L355 155 L370 140 L385 155 L400 140 L415 155 L430 140 L445 155 L460 140" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M310 140 L325 155 L340 140Z M370 140 L385 155 L400 140Z M430 140 L445 155 L460 140Z" fill="#32AD99" opacity="0.25"/>
+
+    <path d="M280 160 L295 145 L310 160 L325 145 L340 160 L355 145 L370 160 L385 145 L400 160 L415 145 L430 160 L445 145 L460 160" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M280 160 L295 145 L310 160Z M340 160 L355 145 L370 160Z M400 160 L415 145 L430 160Z" fill="#32AD99" opacity="0.25"/>
+  </g>
+
+  <!-- Wave patterns above and below -->
+  <g opacity="0.55">
+    <path d="M50 100 Q75 88 100 100 T150 100 T200 100 T250 100 T300 100 T350 100 T400 100 T450 100" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M50 106 Q75 94 100 106 T150 106 T200 106 T250 106 T300 106 T350 106 T400 106 T450 106" fill="none" stroke="#32AD99" stroke-width="1"/>
+
+    <path d="M50 194 Q75 206 100 194 T150 194 T200 194 T250 194 T300 194 T350 194 T400 194 T450 194" fill="none" stroke="#32AD99" stroke-width="1"/>
+    <path d="M50 200 Q75 212 100 200 T150 200 T200 200 T250 200 T300 200 T350 200 T400 200 T450 200" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+  </g>
+
+  <!-- Enata flanking the center -->
+  <g opacity="0.55">
+    <circle cx="160" cy="115" r="3.5" fill="#32AD99"/>
+    <path d="M160 119 L160 130 M156 122 L164 122 M157 135 L160 130 L163 135" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+
+    <circle cx="130" cy="120" r="3" fill="#32AD99"/>
+    <path d="M130 123 L130 132 M127 126 L133 126 M128 136 L130 132 L132 136" fill="none" stroke="#32AD99" stroke-width="1.2"/>
+
+    <circle cx="340" cy="115" r="3.5" fill="#32AD99"/>
+    <path d="M340 119 L340 130 M336 122 L344 122 M337 135 L340 130 L343 135" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+
+    <circle cx="370" cy="120" r="3" fill="#32AD99"/>
+    <path d="M370 123 L370 132 M367 126 L373 126 M368 136 L370 132 L372 136" fill="none" stroke="#32AD99" stroke-width="1.2"/>
+  </g>
+
+  <!-- Ihe (spearheads) at ends -->
+  <g opacity="0.6">
+    <path d="M30 150 L15 140 L30 145 L15 160Z" fill="#32AD99" opacity="0.3" stroke="#32AD99" stroke-width="1.2"/>
+    <path d="M470 150 L485 140 L470 145 L485 160Z" fill="#32AD99" opacity="0.3" stroke="#32AD99" stroke-width="1.2"/>
+  </g>
+
+  <!-- Top/bottom border accents -->
+  <g opacity="0.45">
+    <line x1="80" y1="80" x2="420" y2="80" stroke="#32AD99" stroke-width="1.2" stroke-dasharray="3 8"/>
+    <line x1="80" y1="220" x2="420" y2="220" stroke="#32AD99" stroke-width="1.2" stroke-dasharray="3 8"/>
+  </g>
+</svg>

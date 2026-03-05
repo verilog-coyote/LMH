@@ -1,3 +1,9 @@
+"use client"
+
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import { TattooBand } from "./tattoo-overlays"
+
 const PILLARS = [
   {
     title: "\u2018\u0100ina",
@@ -14,7 +20,7 @@ const PILLARS = [
   {
     title: "Kai",
     subtitle: "The Ocean",
-    description: "The Ka Iwi Scenic Shoreline from Aw\u0101wamalu to Makapu\u2018u, now permanently classified as conservation land.",
+    description: "The Kaiwi Scenic Shoreline from Aw\u0101wamalu to Makapu\u2018u, now permanently classified as conservation land.",
     color: "hsl(185, 55%, 48%)",
   },
   {
@@ -26,50 +32,102 @@ const PILLARS = [
 ] as const
 
 export function AboutSection() {
+  const headerRef = useRef(null)
+  const proverbRef = useRef(null)
+  const pillarsRef = useRef(null)
+  const headerInView = useInView(headerRef, { once: true, margin: "-80px" })
+  const proverbInView = useInView(proverbRef, { once: true, margin: "-80px" })
+  const pillarsInView = useInView(pillarsRef, { once: true, margin: "-80px" })
+
   return (
-    <section id="about" className="relative py-24 md:py-36 tribal-bg">
-      <div className="max-w-6xl mx-auto px-6 md:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20">
+    <section id="about" className="relative py-16 sm:py-24 md:py-36 tribal-bg">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20" ref={headerRef}>
           <div>
-            <div className="flex items-center gap-4 mb-6">
+            <motion.div
+              className="flex items-center gap-4 mb-6"
+              initial={{ opacity: 0, x: -30 }}
+              animate={headerInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6 }}
+            >
               <div className="w-10 h-[2px] bg-accent rounded-full glow-blue" />
-              <p className="text-[10px] tracking-[0.5em] uppercase text-accent font-semibold">Our Story</p>
-            </div>
-            <h2 className="font-serif text-4xl md:text-6xl text-foreground leading-[0.9] font-light">
+              <p className="text-sm tracking-[0.5em] uppercase text-accent font-semibold">Our Story</p>
+            </motion.div>
+            <motion.h2
+              className="font-serif text-4xl sm:text-5xl md:text-7xl text-foreground leading-[0.9] font-light"
+              initial={{ opacity: 0, y: 40 }}
+              animate={headerInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.15 }}
+            >
               Forty-five years of community aloha
-            </h2>
+            </motion.h2>
           </div>
-          <div className="flex items-end">
-            <p className="text-sm text-muted-foreground leading-relaxed font-light">
-              {"From Hanauma Bay to Makapu\u2018u, the Ka Iwi Coast is \"the crescendo of a continuous visual sequence\" from Hawai\u2018i Kai to Waim\u0101nalo. Since 1972, residents from all parts of O\u2018ahu have opposed urban development, protecting this sacred corridor from mauka to makai."}
+          <motion.div
+            className="flex items-end"
+            initial={{ opacity: 0, y: 30 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <p className="text-base text-muted-foreground leading-relaxed font-light">
+              {"From Hanauma Bay to Makapu\u2018u, the Kaiwi Coast is \"the crescendo of a continuous visual sequence\" from Hawai\u2018i Kai to Waim\u0101nalo. Since 1972, residents from all parts of O\u2018ahu have opposed urban development, protecting this sacred corridor from mauka to makai."}
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Full bleed image */}
-        <div className="relative rounded-2xl overflow-hidden mb-20">
-          <img src="/art/coast-aerial.jpg" alt="Aerial illustration of the Ka Iwi coastline" className="w-full h-auto block" loading="lazy" />
-        </div>
+        <motion.div
+          className="relative rounded-2xl overflow-hidden mb-20"
+          initial={{ opacity: 0, y: 40, scale: 0.97 }}
+          animate={headerInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img src="/art/coast-aerial.jpg" alt="Aerial illustration of the Kaiwi coastline" className="w-full h-auto block" loading="lazy" />
+        </motion.div>
 
         {/* Proverb */}
-        <div className="text-center mb-20 relative">
-          {/* Tribal divider lines */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-4 w-32 h-px opacity-20" style={{ backgroundImage: "url(/art/tribal-pattern.svg)", backgroundSize: "80px" }} />
-          <p className="font-serif text-3xl md:text-5xl text-foreground italic font-light leading-snug">
-            {"\"He ali\u2018i ka \u2018\u0101ina, he kauwa ke kanaka\""}
-          </p>
-          <p className="text-sm text-primary mt-4 font-light">The land is chief, man is its servant</p>
+        <div className="text-center mb-20 relative py-12 overflow-hidden" ref={proverbRef}>
+          <TattooBand className="top-0" />
+          <TattooBand className="bottom-0 [&>div]:rotate-180" />
+          <div className="relative z-[2]">
+            <motion.p
+              className="font-serif text-3xl sm:text-4xl md:text-6xl text-foreground italic font-light leading-snug"
+              initial={{ opacity: 0, y: 30, scale: 0.96 }}
+              animate={proverbInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+            >
+              {"\"He ali\u2018i ka \u2018\u0101ina, he kauwa ke kanaka\""}
+            </motion.p>
+            <motion.p
+              className="text-base text-primary mt-4 font-light"
+              initial={{ opacity: 0 }}
+              animate={proverbInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              The land is chief, man is its servant
+            </motion.p>
+          </div>
         </div>
 
         {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {PILLARS.map((pillar) => (
-            <article key={pillar.title} className="frost rounded-2xl p-7 md:p-9 group hover:scale-[1.008] transition-transform duration-500">
-              <div className="w-3 h-3 rounded-full mb-4" style={{ backgroundColor: pillar.color, boxShadow: `0 0 16px ${pillar.color}50` }} />
-              <p className="text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold" style={{ color: pillar.color }}>{pillar.subtitle}</p>
-              <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-3 font-light">{pillar.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed font-light">{pillar.description}</p>
-            </article>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3" ref={pillarsRef}>
+          {PILLARS.map((pillar, i) => (
+            <motion.article
+              key={pillar.title}
+              className="frost rounded-2xl p-5 sm:p-7 md:p-9 group"
+              initial={{ opacity: 0, y: 50 }}
+              animate={pillarsInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
+              whileHover={{ scale: 1.015, transition: { duration: 0.3 } }}
+            >
+              <motion.div
+                className="w-3 h-3 rounded-full mb-4"
+                style={{ backgroundColor: pillar.color, boxShadow: `0 0 16px ${pillar.color}50` }}
+                animate={{ scale: [1, 1.3, 1], boxShadow: [`0 0 16px ${pillar.color}50`, `0 0 28px ${pillar.color}70`, `0 0 16px ${pillar.color}50`] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+              />
+              <p className="text-xs tracking-[0.3em] uppercase mb-2 font-semibold" style={{ color: pillar.color }}>{pillar.subtitle}</p>
+              <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-3 font-light">{pillar.title}</h3>
+              <p className="text-base text-muted-foreground leading-relaxed font-light">{pillar.description}</p>
+            </motion.article>
           ))}
         </div>
       </div>

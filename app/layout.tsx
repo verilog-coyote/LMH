@@ -17,7 +17,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Ka Iwi Coast | Mauka to Makai",
+  title: "Kaiwi Coast | Mauka to Makai",
   description:
     "Forty-five years of community aloha protecting the last undeveloped coastline on O\u2018ahu.",
 }
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#09141a" },
-    { media: "(prefers-color-scheme: light)", color: "#eef2ee" },
+    { media: "(prefers-color-scheme: light)", color: "#a8c4d0" },
   ],
   width: "device-width",
   initialScale: 1,

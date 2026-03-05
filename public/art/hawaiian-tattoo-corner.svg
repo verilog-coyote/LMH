@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Hawaiian Kakau-inspired corner motif (top-right orientation) -->
+  <!-- Uses teal (#32AD99) for visibility as background-image -->
+
+  <!-- Outer L-shaped border -->
+  <g opacity="0.8">
+    <path d="M400 0 L400 400" fill="none" stroke="#32AD99" stroke-width="2.5"/>
+    <path d="M396 0 L396 400" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M0 0 L400 0" fill="none" stroke="#32AD99" stroke-width="2.5"/>
+    <path d="M0 4 L400 4" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+  </g>
+
+  <!-- Vertical niho mano (shark teeth) along right edge -->
+  <g opacity="0.85">
+    <path d="M390 0 L372 15 L390 30 L372 45 L390 60 L372 75 L390 90 L372 105 L390 120 L372 135 L390 150 L372 165 L390 180 L372 195 L390 210 L372 225 L390 240 L372 255 L390 270 L372 285 L390 300 L372 315 L390 330 L372 345 L390 360 L372 375 L390 400" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M390 0 L372 15 L390 30Z M390 60 L372 75 L390 90Z M390 120 L372 135 L390 150Z M390 180 L372 195 L390 210Z M390 240 L372 255 L390 270Z M390 300 L372 315 L390 330Z M390 360 L372 375 L390 400Z" fill="#32AD99" opacity="0.35"/>
+  </g>
+
+  <!-- Horizontal niho mano along top edge -->
+  <g opacity="0.85">
+    <path d="M0 10 L15 28 L30 10 L45 28 L60 10 L75 28 L90 10 L105 28 L120 10 L135 28 L150 10 L165 28 L180 10 L195 28 L210 10 L225 28 L240 10 L255 28 L270 10 L285 28 L300 10 L315 28 L330 10 L345 28 L360 10 L375 28 L390 10" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M30 10 L45 28 L60 10Z M90 10 L105 28 L120 10Z M150 10 L165 28 L180 10Z M210 10 L225 28 L240 10Z M270 10 L285 28 L300 10Z M330 10 L345 28 L360 10Z" fill="#32AD99" opacity="0.35"/>
+  </g>
+
+  <!-- Diagonal ihe (spearhead) chain from corner -->
+  <g opacity="0.7">
+    <path d="M370 35 L355 50 L370 55 L355 70Z" fill="#32AD99" opacity="0.4" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M350 55 L335 70 L350 75 L335 90Z" fill="#32AD99" opacity="0.4" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M330 75 L315 90 L330 95 L315 110Z" fill="#32AD99" opacity="0.4" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M310 95 L295 110 L310 115 L295 130Z" fill="#32AD99" opacity="0.35" stroke="#32AD99" stroke-width="1.2"/>
+    <path d="M290 115 L275 130 L290 135 L275 150Z" fill="#32AD99" opacity="0.3" stroke="#32AD99" stroke-width="1.2"/>
+    <path d="M270 135 L255 150 L270 155 L255 170Z" fill="#32AD99" opacity="0.25" stroke="#32AD99" stroke-width="1"/>
+    <path d="M250 155 L235 170 L250 175 L235 190Z" fill="#32AD99" opacity="0.2" stroke="#32AD99" stroke-width="1"/>
+  </g>
+
+  <!-- Wave arcs radiating from corner -->
+  <g opacity="0.5" fill="none" stroke="#32AD99">
+    <path d="M400 0 Q350 50 300 40 Q250 30 200 60" stroke-width="1.5"/>
+    <path d="M400 40 Q360 80 320 70 Q270 55 220 90" stroke-width="1.2"/>
+    <path d="M400 80 Q370 110 340 100 Q290 85 240 120" stroke-width="1"/>
+    <path d="M400 120 Q380 140 360 130 Q310 110 260 150" stroke-width="0.8"/>
+  </g>
+
+  <!-- Enata (human figures) scattered in the corner area -->
+  <g opacity="0.6">
+    <circle cx="340" cy="140" r="4" fill="#32AD99"/>
+    <path d="M340 144 L340 158 M334 148 L346 148 M336 164 L340 158 L344 164" fill="none" stroke="#32AD99" stroke-width="2"/>
+    <circle cx="310" cy="170" r="3.5" fill="#32AD99"/>
+    <path d="M310 174 L310 186 M305 177 L315 177 M307 191 L310 186 L313 191" fill="none" stroke="#32AD99" stroke-width="1.8"/>
+    <circle cx="355" cy="185" r="3" fill="#32AD99"/>
+    <path d="M355 188 L355 198 M351 191 L359 191 M352 203 L355 198 L358 203" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+  </g>
+
+  <!-- Concentric arcs -->
+  <g opacity="0.4" fill="none" stroke="#32AD99">
+    <path d="M400 0 A200 200 0 0 0 200 0" stroke-width="1.2"/>
+    <path d="M400 0 A280 280 0 0 0 280 0" stroke-width="0.8" stroke-dasharray="4 6"/>
+    <path d="M400 60 A180 180 0 0 0 220 60" stroke-width="0.8"/>
+  </g>
+
+  <!-- Inner geometric fill near corner intersection -->
+  <g opacity="0.6">
+    <path d="M365 35 L375 35 L370 42Z" fill="#32AD99"/>
+    <path d="M375 35 L385 35 L380 42Z" fill="#32AD99"/>
+    <path d="M370 42 L380 42 L375 49Z" fill="#32AD99"/>
+  </g>
+
+  <!-- Kalo (taro) leaf stylized in corner -->
+  <g opacity="0.45" transform="translate(320, 60) rotate(-30)">
+    <path d="M0 0 Q-15 -20 0 -40 Q15 -20 0 0Z" fill="none" stroke="#32AD99" stroke-width="1.8"/>
+    <path d="M0 0 L0 -40" fill="none" stroke="#32AD99" stroke-width="1.2"/>
+    <path d="M0 -15 Q-8 -20 -10 -28" fill="none" stroke="#32AD99" stroke-width="0.8"/>
+    <path d="M0 -15 Q8 -20 10 -28" fill="none" stroke="#32AD99" stroke-width="0.8"/>
+  </g>
+</svg>

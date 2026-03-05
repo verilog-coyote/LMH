@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+  <!-- Hawaiian Kakau-inspired horizontal band -->
+  <!-- Uses teal (#32AD99) for visibility as background-image -->
+
+  <!-- Top border line -->
+  <line x1="0" y1="2" x2="800" y2="2" stroke="#32AD99" stroke-width="2.5" opacity="0.8"/>
+  <line x1="0" y1="6" x2="800" y2="6" stroke="#32AD99" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Niho mano (shark teeth) - top row -->
+  <g opacity="0.85">
+    <path d="M0 28 L15 10 L30 28 L45 10 L60 28 L75 10 L90 28 L105 10 L120 28 L135 10 L150 28 L165 10 L180 28 L195 10 L210 28 L225 10 L240 28 L255 10 L270 28 L285 10 L300 28 L315 10 L330 28 L345 10 L360 28 L375 10 L390 28 L405 10 L420 28 L435 10 L450 28 L465 10 L480 28 L495 10 L510 28 L525 10 L540 28 L555 10 L570 28 L585 10 L600 28 L615 10 L630 28 L645 10 L660 28 L675 10 L690 28 L705 10 L720 28 L735 10 L750 28 L765 10 L780 28 L795 10 L800 18" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M0 28 L15 10 L30 28Z M60 28 L75 10 L90 28Z M120 28 L135 10 L150 28Z M180 28 L195 10 L210 28Z M240 28 L255 10 L270 28Z M300 28 L315 10 L330 28Z M360 28 L375 10 L390 28Z M420 28 L435 10 L450 28Z M480 28 L495 10 L510 28Z M540 28 L555 10 L570 28Z M600 28 L615 10 L630 28Z M660 28 L675 10 L690 28Z M720 28 L735 10 L750 28Z M780 28 L795 10 L800 18 L800 28Z" fill="#32AD99" opacity="0.35"/>
+  </g>
+
+  <!-- Parallel wave lines -->
+  <g opacity="0.7">
+    <path d="M0 40 Q25 32 50 40 T100 40 T150 40 T200 40 T250 40 T300 40 T350 40 T400 40 T450 40 T500 40 T550 40 T600 40 T650 40 T700 40 T750 40 T800 40" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+    <path d="M0 46 Q25 38 50 46 T100 46 T150 46 T200 46 T250 46 T300 46 T350 46 T400 46 T450 46 T500 46 T550 46 T600 46 T650 46 T700 46 T750 46 T800 46" fill="none" stroke="#32AD99" stroke-width="1"/>
+  </g>
+
+  <!-- Central geometric band - tapa cloth diamond chain -->
+  <g opacity="0.65">
+    <path d="M0 60 L20 50 L40 60 L20 70Z M40 60 L60 50 L80 60 L60 70Z M80 60 L100 50 L120 60 L100 70Z M120 60 L140 50 L160 60 L140 70Z M160 60 L180 50 L200 60 L180 70Z M200 60 L220 50 L240 60 L220 70Z M240 60 L260 50 L280 60 L260 70Z M280 60 L300 50 L320 60 L300 70Z M320 60 L340 50 L360 60 L340 70Z M360 60 L380 50 L400 60 L380 70Z M400 60 L420 50 L440 60 L420 70Z M440 60 L460 50 L480 60 L460 70Z M480 60 L500 50 L520 60 L500 70Z M520 60 L540 50 L560 60 L540 70Z M560 60 L580 50 L600 60 L580 70Z M600 60 L620 50 L640 60 L620 70Z M640 60 L660 50 L680 60 L660 70Z M680 60 L700 50 L720 60 L700 70Z M720 60 L740 50 L760 60 L740 70Z M760 60 L780 50 L800 60 L780 70Z" fill="none" stroke="#32AD99" stroke-width="1.8"/>
+    <g>
+      <circle cx="20" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="60" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="100" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="140" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="180" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="220" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="260" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="300" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="340" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="380" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="420" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="460" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="500" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="540" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="580" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="620" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="660" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="700" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="740" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+      <circle cx="780" cy="60" r="2" fill="#32AD99" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Lower wave lines -->
+  <g opacity="0.7">
+    <path d="M0 76 Q25 84 50 76 T100 76 T150 76 T200 76 T250 76 T300 76 T350 76 T400 76 T450 76 T500 76 T550 76 T600 76 T650 76 T700 76 T750 76 T800 76" fill="none" stroke="#32AD99" stroke-width="1"/>
+    <path d="M0 82 Q25 90 50 82 T100 82 T150 82 T200 82 T250 82 T300 82 T350 82 T400 82 T450 82 T500 82 T550 82 T600 82 T650 82 T700 82 T750 82 T800 82" fill="none" stroke="#32AD99" stroke-width="1.5"/>
+  </g>
+
+  <!-- Niho mano (shark teeth) - bottom row, inverted -->
+  <g opacity="0.85">
+    <path d="M0 92 L15 110 L30 92 L45 110 L60 92 L75 110 L90 92 L105 110 L120 92 L135 110 L150 92 L165 110 L180 92 L195 110 L210 92 L225 110 L240 92 L255 110 L270 92 L285 110 L300 92 L315 110 L330 92 L345 110 L360 92 L375 110 L390 92 L405 110 L420 92 L435 110 L450 92 L465 110 L480 92 L495 110 L510 92 L525 110 L540 92 L555 110 L570 92 L585 110 L600 92 L615 110 L630 92 L645 110 L660 92 L675 110 L690 92 L705 110 L720 92 L735 110 L750 92 L765 110 L780 92 L795 110 L800 100" fill="none" stroke="#32AD99" stroke-width="2" stroke-linejoin="miter"/>
+    <path d="M30 92 L45 110 L60 92Z M90 92 L105 110 L120 92Z M150 92 L165 110 L180 92Z M210 92 L225 110 L240 92Z M270 92 L285 110 L300 92Z M330 92 L345 110 L360 92Z M390 92 L405 110 L420 92Z M450 92 L465 110 L480 92Z M510 92 L525 110 L540 92Z M570 92 L585 110 L600 92Z M630 92 L645 110 L660 92Z M690 92 L705 110 L720 92Z M750 92 L765 110 L780 92Z" fill="#32AD99" opacity="0.35"/>
+  </g>
+
+  <!-- Bottom border lines -->
+  <line x1="0" y1="114" x2="800" y2="114" stroke="#32AD99" stroke-width="1.5" opacity="0.6"/>
+  <line x1="0" y1="118" x2="800" y2="118" stroke="#32AD99" stroke-width="2.5" opacity="0.8"/>
+</svg>
