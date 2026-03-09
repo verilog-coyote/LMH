@@ -6,15 +6,13 @@ import { motion, useInView } from "framer-motion"
 import { TattooBand } from "./tattoo-overlays"
 
 const ORGANIZATIONS = [
-  { name: "Kaiwi Coalition", role: "Lead Advocacy Coalition", description: "A community committee forever vigilant to keep the Kaiwi coast, mauka-to-makai, in its wild and natural state. Formed in 2004 by organizers from Save Sandy Beach and Livable Maunalua Hui.", founded: "2004" },
-  { name: "Livable Maunalua Hui", role: "Grassroots Nonprofit", description: "A 501(c)(3) nonprofit connecting the community to the \u2018\u0101ina of Maunalua through volunteerism, stewardship, and education. Partners with DLNR and The Trust for Public Land.", founded: "2004" },
-  { name: "The Trust for Public Land", role: "Land Conservation", description: "National conservation nonprofit that helped secure funding and coordinate the acquisition of the 182-acre Kaiwi mauka lands, completing a decades-long effort to protect the coast.", founded: "1972" },
-  { name: "Save Sandy Beach", role: "Founding Movement", description: "The grassroots movement that collected 40,000 signatures and passed a ballot initiative to rezone Sandy Beach from residential to preservation.", founded: "1988" },
-  { name: "Kaiwi Action Council", role: "Community Organizing", description: "Organized community opposition to development schemes including a major developer deal in 1995 and the \u2018No Cabins on Kaiwi\u2019 campaign in 2006.", founded: "1995" },
-  { name: "Hui Nalu Canoe Club", role: "Cultural Partner", description: "Cultural partner connecting the community to the ocean and traditional Hawaiian canoe practices along the Kaiwi Coast.", founded: "1908" },
-  { name: "Friends of Hanauma Bay", role: "Marine Conservation", description: "Non-profit dedicated to the conservation, protection, and restoration of Hanauma Bay, Hawai\u2018i\u2019s first Marine Life Conservation District. Conducts coral restoration, clean-ups, scientific studies, and community education since 1991.", founded: "1991" },
-  { name: "Sierra Club Oahu Group", role: "Environmental Advocacy", description: "Volunteer-led advocacy group with over 8,000 members. Led the restoration of Wawamalu Beach on the Kaiwi Scenic Shoreline, removing invasive species, planting native trees, and advocating for protections against illegal off-roading.", founded: "1968" },
-  { name: "808 Cleanups", role: "Environmental Restoration", description: "501(c)(3) nonprofit empowering communities to restore Hawai\u02BBi\u2019s native ecosystems mauka to makai. Over 8,000 volunteers have removed more than 1 million pounds of trash through beach, trail, reef, and urban cleanups, invasive species removal, and native plant restoration across all islands.", founded: "2013" },
+  { name: "Kaiwi Coalition", role: "Lead Advocacy Coalition", description: "A community committee forever vigilant to keep the Kaiwi coast, mauka-to-makai, in its wild and natural state. Formed in 2004 by organizers from Save Sandy Beach and Livable Maunalua Hui.", founded: "2004", website: "https://www.kaiwicoast.org" },
+  { name: "Livable Maunalua Hui", role: "Grassroots Nonprofit", description: "A 501(c)(3) nonprofit connecting the community to the \u2018\u0101ina of Maunalua through volunteerism, stewardship, and education. Partners with DLNR and The Trust for Public Land.", founded: "2004", website: "https://www.lhkh.org" },
+  { name: "The Trust for Public Land", role: "Land Conservation", description: "National conservation nonprofit that helped secure funding and coordinate the acquisition of the 182-acre Kaiwi mauka lands, completing a decades-long effort to protect the coast.", founded: "1972", website: "https://www.tpl.org" },
+  { name: "Hui Nalu Canoe Club", role: "Cultural Partner", description: "Cultural partner connecting the community to the ocean and traditional Hawaiian canoe practices along the Kaiwi Coast.", founded: "1908", website: "https://huinalu.org" },
+  { name: "Friends of Hanauma Bay", role: "Marine Conservation", description: "Non-profit dedicated to the conservation, protection, and restoration of Hanauma Bay, Hawai\u2018i\u2019s first Marine Life Conservation District. Conducts coral restoration, clean-ups, scientific studies, and community education since 1991.", founded: "1991", website: "https://friendsofhanaumabay.org" },
+  { name: "Sierra Club Oahu Group", role: "Environmental Advocacy", description: "Volunteer-led advocacy group with over 8,000 members. Led the restoration of Wawamalu Beach on the Kaiwi Scenic Shoreline, removing invasive species, planting native trees, and advocating for protections against illegal off-roading.", founded: "1968", website: "https://www.sierracluboahu.org" },
+  { name: "808 Cleanups", role: "Environmental Restoration", description: "501(c)(3) nonprofit empowering communities to restore Hawai\u02BBi\u2019s native ecosystems mauka to makai. Over 8,000 volunteers have removed more than 1 million pounds of trash through beach, trail, reef, and urban cleanups, invasive species removal, and native plant restoration across all islands.", founded: "2013", website: "https://808cleanups.org" },
 ]
 
 export function OrganizationsSection() {
@@ -61,9 +59,12 @@ export function OrganizationsSection() {
 
         <div className="space-y-3" ref={cardsRef}>
           {ORGANIZATIONS.map((org, i) => (
-            <motion.div
+            <motion.a
               key={org.name}
-              className="frost rounded-2xl p-5 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-8 group"
+              href={org.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="frost rounded-2xl p-5 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-8 group no-underline"
               initial={{ opacity: 0, y: 40, x: i % 2 === 0 ? -20 : 20 }}
               animate={cardsInView ? { opacity: 1, y: 0, x: 0 } : {}}
               transition={{ duration: 0.55, delay: i * 0.1, ease: "easeOut" }}
@@ -79,7 +80,7 @@ export function OrganizationsSection() {
                 <span className="text-xs text-foreground/50 font-medium">{"Est. "}{org.founded}</span>
                 <ArrowUpRight className="h-4 w-4 text-foreground/40 group-hover:text-primary transition-colors duration-300" />
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
